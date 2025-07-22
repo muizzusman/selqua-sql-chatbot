@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "user": {
+      "name": "Saud Shehzad",
+      "email": "saudshehzad24@gmail.com"
+    },
+    "dates": {
+      "created": "5/23/2025 20:22",
+      "updated": "5/23/2025 20:23",
+      "exported": "5/23/2025 20:26"
+    },
+    "powered_by": "ChatGPT Exporter (https://www.chatgptexporter.com)"
+  },
+  "messages": [
+    {
+      "role": "Prompt",
+      "say": "How sql work as DML detail everything that a SQL programmer should know"
+    },
+    {
+      "role": "Response",
+      "say": "SQL (Structured Query Language) is a standard language for managing and manipulating relational databases. As a DML (Data Manipulation Language), SQL provides commands to retrieve, insert, update, and delete data in database tables. Below is a detailed explanation of how SQL works as a DML, covering everything a SQL programmer should know:\n\n\n\n🔹 What is DML?\n\n\nDML (Data Manipulation Language) is a subset of SQL used to manage data within the schema of a database. It does not modify the database structure (that’s DDL: Data Definition Language), but rather the contents of the tables.\n\n\n🔹 Main DML Commands in SQL\n\nCommand\nDescription\nSELECT\nRetrieve data from one or more tables.\nINSERT\nAdd new rows into a table.\nUPDATE\nModify existing rows in a table.\nDELETE\nRemove rows from a table.\n\n\n🔸 1. SELECT – Retrieving Data\n\n\nThe most used DML command. It fetches data from a database.\n\n\nSyntax:\n\n\nSELECT column1, column2 FROM table_name WHERE condition;\n\n\nExample:\n\n\nSELECT name, age FROM employees WHERE age > 30;\n\n\nNotes:\n\n\nCan use WHERE for filtering.\n\nUse ORDER BY, GROUP BY, HAVING, etc.\n\nJoins can be used to fetch data from multiple tables.\n\n\n\n🔸 2. INSERT – Adding Data\n\n\nInserts new rows into a table.\n\n\nSyntax:\n\n\nINSERT INTO table_name (column1, column2) VALUES (value1, value2);\n\n\nExample:\n\n\nINSERT INTO employees (name, age) VALUES ('Ali', 28);\n\n\nNotes:\n\n\nYou can insert multiple rows using:\n\n\nINSERT INTO employees (name, age)\nVALUES ('Sara', 25), ('John', 35);\n\n\nIf you omit column names, you must specify all columns in correct order:\n\n\nINSERT INTO employees VALUES (1, 'Ahmed', 30, 'IT');\n\n\n\n🔸 3. UPDATE – Modifying Data\n\n\nChanges existing data in one or more rows.\n\n\nSyntax:\n\n\nUPDATE table_name\nSET column1 = value1, column2 = value2\nWHERE condition;\n\n\nExample:\n\n\nUPDATE employees\nSET age = 40\nWHERE name = 'Ali';\n\n\nNotes:\n\n\nAlways use WHERE to prevent updating all rows.\n\nUse joins in UPDATE to modify data based on other tables.\n\n\n\n🔸 4. DELETE – Removing Data\n\n\nDeletes one or more rows from a table.\n\n\nSyntax:\n\n\nDELETE FROM table_name WHERE condition;\n\n\nExample:\n\n\nDELETE FROM employees WHERE age < 25;\n\n\nNotes:\n\n\nWithout WHERE, all rows in the table will be deleted.\n\nThis operation is not reversible unless within a transaction.\n\n\n\n🔹 Additional Concepts Every SQL Programmer Should Know\n\n\n🔸 Transactions\n\n\nTo ensure data integrity, DML operations can be grouped in transactions:\n\n\nBEGIN TRANSACTION;\nUPDATE employees SET salary = salary * 1.10 WHERE department = 'Sales';\nCOMMIT;\n-- or use ROLLBACK; to undo\n\n\n🔸 ACID Properties\n\n\nAtomicity – All or nothing.\n\nConsistency – Valid state maintained.\n\nIsolation – Operations don’t interfere.\n\nDurability – Once committed, changes persist.\n\n\n🔸 Constraints\n\n\nNOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK\n\nThese ensure valid data is inserted or updated.\n\n\n🔸 Using Subqueries\n\n\nSELECT name FROM employees WHERE department_id = \n(SELECT id FROM departments WHERE name = 'IT');\n\n\n🔸 Joins\n\n\nTo retrieve data across multiple tables:\n\n\nSELECT e.name, d.name\nFROM employees e\nJOIN departments d ON e.department_id = d.id;\n\n\n🔸 Indexing\n\n\nIndexes speed up SELECTs but slow down INSERT/UPDATE/DELETE.\n\n\n\n🔸 Urdu Explanation – SQL as DML\n\n\nSQL DML commands database کی موجودہ rows کو manage کرتے ہیں۔\nیہ commands database کا structure نہیں بدلتے بلکہ data کو add، change یا delete کرتے ہیں۔\n\n\nSELECT – data ko table se nikalta hai.\n\nINSERT – table mein naya data dalta hai.\n\nUPDATE – kisi existing data ko change karta hai.\n\nDELETE – kisi data row ko remove karta hai.\n\n\nExample Urdu:\n\n\n-- Ali ka age update karna\nUPDATE employees SET age = 35 WHERE name = 'Ali';\n\n\n\n✅ Best Practices for DML\n\n\nAlways use WHERE in UPDATE/DELETE to avoid accidental full-table modifications.\n\nUse transactions for critical changes.\n\nHandle NULLs properly in conditions.\n\nNormalize your database schema for consistency.\n\nMonitor performance using EXPLAIN plans.\n\nBack up data before major DML operations.\n\n\n\nWould you like me to provide practical SQL scripts for a sample database showing these DML commands in action?\n\n\n4o"
+    }
+  ],
+  "title": "SQL DML Overview"
+}

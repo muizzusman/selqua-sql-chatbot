@@ -1,0 +1,147 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --bot-bg: #e0e0e0;
+  --user-bg: #c7e1c7;
+  --input-bg: #e0e0e0;
+  --input-hover: #d0d0d0;
+  --btn-bg: #789c88;
+  --btn-hover: #5a7c6a;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --bot-bg: #333333;
+  --user-bg: #4a7c59;
+  --input-bg: #333333;
+  --input-hover: #444444;
+  --btn-bg: #5a7c6a;
+  --btn-hover: #789c88;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background .3s, color .3s;
+}
+
+#logo {
+  font-family: 'Poppins', bold;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  cursor: pointer;
+}
+
+header button {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chat-message {
+  max-width: 75%;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  line-height: 1.4;
+  animation: fadeIn 0.3s ease;
+}
+
+.chat-message.bot {
+  background-color: var(--bot-bg);
+  align-self: flex-start;
+  font-family: 'Poppins', bold;
+}
+
+.chat-message.user {
+  background-color: var(--user-bg);
+  align-self: flex-end;
+  font-family: 'Poppins', bold;
+}
+
+.input-container {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.input-container input {
+  flex: 1;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  background: var(--input-bg);
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: background 0.3s;
+}
+
+.input-container input:focus {
+  outline: none;
+  background: var(--input-hover);
+}
+
+.input-container button {
+  background: var(--btn-bg);
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  width: 3rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.input-container button:hover {
+  background: var(--btn-hover);
+}
+
+footer {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-family: 'Poppins', bold;
+  opacity: 30%;
+}
+
+footer a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  header, .input-container {
+    flex-direction: column;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}

@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "user": {
+      "name": "Anonymous",
+      "email": ""
+    },
+    "dates": {
+      "created": "5/23/2025 10:50",
+      "updated": "5/23/2025 10:53",
+      "exported": "5/23/2025 11:13"
+    },
+    "powered_by": "ChatGPT Exporter (https://www.chatgptexporter.com)"
+  },
+  "messages": [
+    {
+      "role": "Prompt",
+      "say": "how SQL words as a DML"
+    },
+    {
+      "role": "Response",
+      "say": "SQL (Structured Query Language) is divided into several categories, and DML (Data Manipulation Language) is one of them. DML is used to manage data within the objects (like tables) of a database.\n\n\nHere’s how SQL works as a DML:\n\n\n🔹 Main DML Commands in SQL\n\n\nSELECT – Retrieves data from one or more tables.\n\n\nSELECT * FROM employees;\n\nINSERT – Adds new rows (records) to a table.\n\n\nINSERT INTO employees (name, department, salary)\nVALUES ('Alice', 'HR', 50000);\n\nUPDATE – Modifies existing data in a table.\n\n\nUPDATE employees\nSET salary = 55000\nWHERE name = 'Alice';\n\nDELETE – Removes rows from a table.\n\n\nDELETE FROM employees\nWHERE name = 'Alice';\n\n\n\n🔸 DML vs. Other SQL Categories\n\nCategory\nPurpose\nDML\nManage data (SELECT, INSERT, UPDATE, DELETE)\nDDL (Data Definition Language)\nDefine structure (CREATE, ALTER, DROP)\nDCL (Data Control Language)\nPermissions (GRANT, REVOKE)\nTCL (Transaction Control Language)\nManage transactions (COMMIT, ROLLBACK)\n\n\n🔹 DML and Transactions\n\n\nDML statements are usually transactional, meaning they can be grouped and either committed (saved) or rolled back (undone):\n\n\nBEGIN TRANSACTION;\n\nUPDATE accounts\nSET balance = balance - 100\nWHERE account_id = 1;\n\nUPDATE accounts\nSET balance = balance + 100\nWHERE account_id = 2;\n\nCOMMIT;\n\n\nOr, if an error occurs:\n\n\nROLLBACK;\n\n\n\nLet me know if you'd like real-world examples or a sample database to try DML commands on!\n\n\n4o"
+    },
+    {
+      "role": "Prompt",
+      "say": "briefly explain"
+    },
+    {
+      "role": "Response",
+      "say": "Sure! Here's a brief explanation:\n\n\nSQL as a DML (Data Manipulation Language) is used to manage data in database tables. It includes four main commands:\n\n\nSELECT – Retrieves data from a table.\n\nINSERT – Adds new data (rows).\n\nUPDATE – Modifies existing data.\n\nDELETE – Removes data from a table.\n\n\nThese commands let you work with the actual data in the database. They are often used inside transactions, allowing changes to be saved (COMMIT) or undone (ROLLBACK).\n\n\n4o"
+    }
+  ],
+  "title": "SQL DML Overview"
+}

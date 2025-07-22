@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "user": {
+      "name": "anywayss_.abdullahhh",
+      "email": "a.for.abdullahhh@gmail.com"
+    },
+    "dates": {
+      "created": "5/23/2025 10:50",
+      "updated": "5/23/2025 11:02",
+      "exported": "5/23/2025 11:15"
+    },
+    "powered_by": "ChatGPT Exporter (https://www.chatgptexporter.com)"
+  },
+  "messages": [
+    {
+      "role": "Prompt",
+      "say": "How SQL works as DML explain"
+    },
+    {
+      "role": "Response",
+      "say": "SQL (Structured Query Language) DML (Data Manipulation Language) ka part data ko modify karne ke liye use hota hai jo kisi database ke tables mein already stored hota hai. Iska kaam hota hai:\n\n\n\n🔹 DML ka Full Form: Data Manipulation Language\n\n\nDML SQL ke wo commands hoti hain jo:\n\n\nData ko insert karte hain\n\nData ko update karte hain\n\nData ko delete karte hain\n\nData ko retrieve (fetch) karte hain\n\n\n\n✅ Basic DML Commands in SQL\n\n\n1. INSERT – Data Add Karna\n\n\nYeh command table mein naye records (rows) add karne ke liye use hoti hai.\n\n\nINSERT INTO Students (ID, Name, Age)\nVALUES (1, 'Ali', 20);\n\n\n👉 Is command ne Students table mein ek new student ka record add kiya.\n\n\n\n2. SELECT – Data Retrieve Karna\n\n\nYeh command table se data fetch karne ke liye use hoti hai.\n\n\nSELECT * FROM Students;\n\n\n👉 Yeh command Students table ka poora data show karegi.\n\n\nSELECT Name, Age FROM Students WHERE Age > 18;\n\n\n👉 Yeh command un students ke names aur ages ko fetch karegi jinki age 18 se zyada hai.\n\n\n\n3. UPDATE – Data Change Karna\n\n\nYeh command existing data ko modify karne ke liye hoti hai.\n\n\nUPDATE Students\nSET Age = 21\nWHERE ID = 1;\n\n\n👉 Is command ne student jiska ID 1 tha, uski age ko 21 kar diya.\n\n\n\n4. DELETE – Data Remove Karna\n\n\nYeh command kisi record ko table se delete karne ke liye hoti hai.\n\n\nDELETE FROM Students\nWHERE ID = 1;\n\n\n👉 Is command ne student jiska ID 1 tha, uska record delete kar diya.\n\n\n\n🔁 Summary Table:\n\nCommand\nPurpose\nExample\nINSERT\nNaya record add karna\nINSERT INTO ...\nSELECT\nData fetch karna\nSELECT * FROM ...\nUPDATE\nExisting record change karna\nUPDATE ... SET ...\nDELETE\nRecord delete karna\nDELETE FROM ...\n\n\n📌 Important Notes:\n\n\nDML queries database ke data ko manipulate karti hain, schema ko nahi.\n\nIn commands ka effect temporary hota hai jab tak COMMIT nahi hota (in transactional DBs).\n\nSELECT command technically DQL (Data Query Language) ka part hai, lekin DML ka extended part mana jata hai.\n\n\n\nAgar aap chahen to mein in commands ka visual flow diagram ya practical example table bhi bana sakta hoon."
+    },
+    {
+      "role": "Prompt",
+      "say": "explain briefly"
+    },
+    {
+      "role": "Response",
+      "say": "✅ Brief Explanation: How SQL works as DML\n\n\nDML (Data Manipulation Language) SQL ka wo part hai jo database ke data ke upar kaam karta hai — data ko insert, retrieve, update, aur delete karta hai.\n\n\n\n🔹 1. INSERT\n\n\nNew record ko table mein add karta hai.\n\n\nINSERT INTO Students (ID, Name) VALUES (1, 'Ali');\n\n\n\n🔹 2. SELECT\n\n\nTable se data ko read (retrieve) karta hai.\n\n\nSELECT * FROM Students;\n\n\n\n🔹 3. UPDATE\n\n\nExisting record ke data ko change karta hai.\n\n\nUPDATE Students SET Name = 'Ahmed' WHERE ID = 1;\n\n\n\n🔹 4. DELETE\n\n\nRecord ko table se remove karta hai.\n\n\nDELETE FROM Students WHERE ID = 1;\n\n\n\n📌 Summary:\n\n\nSQL DML ka use database ke andar ke data ko modify karne ke liye hota hai — add, read, change, ya delete karne ke liye.\n\n\nAgar aapko har command ka chhota real-life example chahiye to bataiye."
+    },
+    {
+      "role": "Prompt",
+      "say": "its just simple explaination i said do briefly"
+    },
+    {
+      "role": "Response",
+      "say": "Got it! Here's a brief but meaningful explanation of how SQL works as DML:\n\n\n\n💡 SQL as DML (Data Manipulation Language)\n\n\nSQL DML un commands ka group hai jo database ke existing data ko manipulate karte hain — jaise data ko insert, read, update, aur delete karna.\n\n\n\n✴️ DML Commands:\n\nCommand\nKaam\nINSERT\nNaya data add karta hai\nSELECT\nData read ya fetch karta hai\nUPDATE\nExisting data ko change karta hai\nDELETE\nData ko remove karta hai\n\n\nExample:\nAgar aap Students table mein data add karna, dekhna, change karna ya hataana chahte hain, to DML commands use hongi.\n\n\n\nYeh commands data pe kaam karti hain, table ke structure pe nahi.\n\n\n4o"
+    },
+    {
+      "role": "Prompt",
+      "say": "isko ek essay ki form mein likh ke do detailed search in english also add real life examples"
+    },
+    {
+      "role": "Response",
+      "say": "4o"
+    }
+  ],
+  "title": "SQL DML Commands Explained"
+}

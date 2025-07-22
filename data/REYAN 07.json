@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "user": {
+      "name": "REYAN SHEHZAD",
+      "email": "23018065007@skt.umt.edu.pk"
+    },
+    "dates": {
+      "created": "5/23/2025 10:50",
+      "updated": "5/23/2025 10:58",
+      "exported": "5/23/2025 11:13"
+    },
+    "powered_by": "ChatGPT Exporter (https://www.chatgptexporter.com)"
+  },
+  "messages": [
+    {
+      "role": "Prompt",
+      "say": "HOW SQL WORKS AS DML?"
+    },
+    {
+      "role": "Response",
+      "say": "SQL (Structured Query Language) works as a DML (Data Manipulation Language) by allowing users to manipulate data stored in a database. This includes inserting, updating, deleting, and retrieving data from tables.\n\n\nKey DML Commands in SQL:\n\n\nSELECT\n\n\nRetrieves data from one or more tables.\n\nExample:\n\n\nSELECT * FROM employees;\n\nReturns all rows and columns from the employees table.\n\nINSERT\n\n\nAdds new records (rows) into a table.\n\nExample:\n\n\nINSERT INTO employees (name, position, salary)\nVALUES ('Ali', 'Manager', 80000);\n\nUPDATE\n\n\nModifies existing data in a table.\n\nExample:\n\n\nUPDATE employees\nSET salary = 85000\nWHERE name = 'Ali';\n\nDELETE\n\n\nRemoves existing records from a table.\n\nExample:\n\n\nDELETE FROM employees\nWHERE name = 'Ali';\n\n\nHow It Works Behind the Scenes:\n\n\nWhen a DML command is executed:\n\n\nThe SQL engine parses and validates the syntax.\n\nThe engine checks permissions and constraints (e.g., foreign keys, data types).\n\nThe command is executed on the actual data stored in the database.\n\nChanges can be committed (saved permanently) or rolled back (undone), depending on transaction control.\n\n\nSummary Table:\n\nCommand\nPurpose\nAffects Data\nAffects Structure\nSELECT\nRetrieve data\n✅\n❌\nINSERT\nAdd new data\n✅\n❌\nUPDATE\nModify existing data\n✅\n❌\nDELETE\nRemove data\n✅\n❌\n\nLet me know if you want an example in a real-world scenario (like a school or store database)."
+    },
+    {
+      "role": "Prompt",
+      "say": "CAN U EXPLAIN HOW IT WORKS A BIT MORE?"
+    },
+    {
+      "role": "Response",
+      "say": "Sure! Let’s break it down in simple terms with a real-world example so you can clearly understand how SQL works as a DML (Data Manipulation Language).\n\n\n\n🧠 Think of a Database Like an Excel File\n\n\nImagine you have an Excel sheet for your company with a table called employees:\n\nid\nname\nposition\nsalary\n1\nAli\nManager\n80000\n2\nSara\nDeveloper\n60000\n3\nBilal\nDesigner\n50000\n\nThis is how data is stored in a table inside a SQL database.\n\n\n\n🔧 What SQL DML Does:\n\n\nDML is about working with the data inside that table.\n\n\n\n1. SELECT – Get the Data (Read)\n\n\nWant to see who’s working in the company?\n\n\nSELECT * FROM employees;\n\n\nResult:\nIt shows you all the rows (like a printout of your Excel sheet).\n\n\n\n2. INSERT – Add New Data (Create)\n\n\nA new employee, Zain, joins your company:\n\n\nINSERT INTO employees (name, position, salary)\nVALUES ('Zain', 'Intern', 30000);\n\n\nWhat Happens:\nThe SQL engine adds a new row in the table with this data.\n\n\n\n3. UPDATE – Change Existing Data\n\n\nLet’s say Zain gets promoted and his salary is now 40000:\n\n\nUPDATE employees\nSET salary = 40000\nWHERE name = 'Zain';\n\n\nWhat Happens:\nSQL finds the row where name = 'Zain' and updates the salary column.\n\n\n\n4. DELETE – Remove Data\n\n\nZain leaves the company:\n\n\nDELETE FROM employees\nWHERE name = 'Zain';\n\n\nWhat Happens:\nThe SQL engine removes that row from the table.\n\n\n\n🛡 Behind the Scenes: How SQL Handles It\n\n\nEvery time you run a DML command:\n\n\nSQL parses your query – It checks the command for correct syntax.\n\nValidates your request – It makes sure the table exists and you have permission.\n\nExecutes the command – It accesses the data storage and makes the changes.\n\nTransaction Control – If auto-commit is off, you can undo changes using ROLLBACK, or save them using COMMIT.\n\n\n\n🚦 Real Example Flow\n\n\nLet’s say you run:\n\n\nBEGIN; -- Start a transaction\n\nUPDATE employees SET salary = 70000 WHERE name = 'Sara';\n\nCOMMIT; -- Save the change\n\n\nIf something goes wrong before COMMIT, you can undo it with:\n\n\nROLLBACK;\n\n\n\n✅ Summary:\n\nAction\nSQL Command\nReal World Equivalent\nRead\nSELECT\nLooking at your Excel data\nCreate\nINSERT\nAdding a new row to the sheet\nUpdate\nUPDATE\nChanging values in a row\nDelete\nDELETE\nRemoving a row from the sheet\n\n\nWould you like me to show this with a simple table and result simulation visually?\n\n\n4o"
+    }
+  ],
+  "title": "SQL as DML"
+}

@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "user": {
+      "name": "Laiba Kanwal",
+      "email": "laibakanwal865@gmail.com"
+    },
+    "dates": {
+      "created": "5/23/2025 11:19",
+      "updated": "5/23/2025 11:19",
+      "exported": "5/23/2025 11:20"
+    },
+    "powered_by": "ChatGPT Exporter (https://www.chatgptexporter.com)"
+  },
+  "messages": [
+    {
+      "role": "Prompt",
+      "say": "how sql works as dml"
+    },
+    {
+      "role": "Response",
+      "say": "SQL (Structured Query Language) works as a Data Manipulation Language (DML) by allowing users to retrieve, insert, update, and delete data in a database. DML is one of the main components of SQL, used specifically for managing data stored in tables.\n\n\nHere’s how SQL works as a DML:\n\n\n\n🔹 1. SELECT – Retrieve data\n\n\nUsed to fetch data from one or more tables.\n\n\nSELECT name, age FROM students WHERE age > 20;\n\nThis query retrieves names and ages of students older than 20.\n\n\n🔹 2. INSERT – Add new data\n\n\nUsed to insert new records into a table.\n\n\nINSERT INTO students (name, age, class) VALUES ('Ali', 21, 'BSCS');\n\nThis adds a new student to the students table.\n\n\n🔹 3. UPDATE – Modify existing data\n\n\nUsed to change data in one or more rows.\n\n\nUPDATE students SET age = 22 WHERE name = 'Ali';\n\nThis updates the age of the student named 'Ali'.\n\n\n🔹 4. DELETE – Remove data\n\n\nUsed to delete data from a table.\n\n\nDELETE FROM students WHERE age < 18;\n\nThis deletes all students younger than 18.\n\n\n🔸 Key Points:\n\n\nDML does not change the structure of the table (that’s done by DDL – Data Definition Language).\n\nThese commands usually affect only data in the tables.\n\nDML operations can be rolled back if within a transaction.\n\n\n\nIf you want, I can also explain DML with a practical example or help you create DML queries for a specific database.\n\n\n4o"
+    }
+  ],
+  "title": "SQL DML Operations"
+}

@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "user": {
+      "name": "Sania Arbab",
+      "email": "1saniaarbab@gmail.com"
+    },
+    "dates": {
+      "created": "5/23/2025 14:10",
+      "updated": "5/23/2025 14:10",
+      "exported": "5/23/2025 14:11"
+    },
+    "powered_by": "ChatGPT Exporter (https://www.chatgptexporter.com)"
+  },
+  "messages": [
+    {
+      "role": "Prompt",
+      "say": "how sql work as dml give details"
+    },
+    {
+      "role": "Response",
+      "say": "SQL (Structured Query Language) works as a DML (Data Manipulation Language) by providing commands that allow users to manipulate data stored in relational databases. DML is one of the key subsets of SQL, alongside DDL (Data Definition Language), DCL (Data Control Language), and TCL (Transaction Control Language).\n\n\n\n📘 What is DML?\n\n\nData Manipulation Language refers to the SQL commands used for managing data within tables. These operations include:\n\n\nINSERT – Add new rows to a table\n\nUPDATE – Modify existing data in a table\n\nDELETE – Remove data from a table\n\nSELECT – Retrieve data from one or more tables (sometimes categorized as DQL – Data Query Language, but often grouped with DML)\n\n\n\n🛠️ How DML Commands Work\n\n\n1. INSERT\n\n\nUsed to add new records to a table.\n\n\nINSERT INTO employees (id, name, position, salary)\nVALUES (101, 'Alice', 'Manager', 75000);\n\n\nWhat happens: The database engine adds a new row to the employees table with the provided values.\n\n\n2. UPDATE\n\n\nUsed to modify existing records in a table.\n\n\nUPDATE employees\nSET salary = 80000\nWHERE id = 101;\n\n\nWhat happens: The engine locates the row with id = 101 and updates the salary column to 80000.\n\n\n3. DELETE\n\n\nUsed to delete one or more records from a table.\n\n\nDELETE FROM employees\nWHERE id = 101;\n\n\nWhat happens: The row with id = 101 is removed from the employees table.\n\n\n4. SELECT\n\n\nUsed to query and retrieve data.\n\n\nSELECT name, position\nFROM employees\nWHERE salary > 50000;\n\n\nWhat happens: The database returns the names and positions of employees with salaries above 50000.\n\n\n\n⚙️ Behind the Scenes: How It Works\n\n\nQuery Parsing: SQL queries are parsed to check syntax and structure.\n\nQuery Optimization: The database engine finds the most efficient way to execute the command.\n\nExecution: The engine interacts with the underlying storage to read/write/update/delete the necessary data.\n\nTransaction Handling: DML operations are usually part of transactions, which can be committed (saved) or rolled back (undone).\n\n\n\n🔐 Transaction Control with DML\n\n\nDML operations are often wrapped in transactions:\n\n\nBEGIN;\n\nUPDATE accounts SET balance = balance - 100 WHERE id = 1;\nUPDATE accounts SET balance = balance + 100 WHERE id = 2;\n\nCOMMIT;\n\n\nEnsures atomicity – either both updates happen, or neither happens.\n\n\n\n✅ Summary Table\n\nSQL Command\nOperation\nAffects Data?\nCan Rollback?\nINSERT\nAdd data\nYes\nYes\nUPDATE\nModify data\nYes\nYes\nDELETE\nRemove data\nYes\nYes\nSELECT\nRetrieve data\nNo\nNo\n\n\nLet me know if you want real-world examples or how DML is used in specific SQL systems like MySQL, PostgreSQL, or SQL Server.\n\n\n4o"
+    }
+  ],
+  "title": "SQL DML Operations"
+}

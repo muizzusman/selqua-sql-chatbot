@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "user": {
+      "name": "Muhammad Hussain",
+      "email": "hussainsulehri34@gmail.com"
+    },
+    "dates": {
+      "created": "5/23/2025 10:50",
+      "updated": "5/23/2025 10:50",
+      "exported": "5/23/2025 14:22"
+    },
+    "powered_by": "ChatGPT Exporter (https://www.chatgptexporter.com)"
+  },
+  "messages": [
+    {
+      "role": "Prompt",
+      "say": "how sql works as dml"
+    },
+    {
+      "role": "Response",
+      "say": "SQL (Structured Query Language) serves multiple purposes, and one of its primary roles is functioning as a DML (Data Manipulation Language). As DML, SQL is used to retrieve, insert, update, and delete data within a database. Here's how it works in this context:\n\n\n\n✅ Main SQL DML Commands\n\nCommand\nDescription\nSELECT\nRetrieves data from one or more tables\nINSERT\nAdds new rows of data to a table\nUPDATE\nModifies existing data in a table\nDELETE\nRemoves data from a table\n\n\n🔍 1. SELECT – Retrieve Data\n\n\nSELECT * FROM employees;\n\n\nFetches all columns from the employees table.\n\nYou can add conditions:\n\n\nSELECT name, salary FROM employees WHERE department = 'Sales';\n\n\n\n➕ 2. INSERT – Add New Data\n\n\nINSERT INTO employees (name, department, salary)\nVALUES ('John Doe', 'Marketing', 50000);\n\n\nAdds a new row with values for each specified column.\n\n\n\n✏️ 3. UPDATE – Modify Existing Data\n\n\nUPDATE employees\nSET salary = 55000\nWHERE name = 'John Doe';\n\n\nChanges the salary of 'John Doe' to 55000.\n\n\n\n❌ 4. DELETE – Remove Data\n\n\nDELETE FROM employees\nWHERE name = 'John Doe';\n\n\nDeletes the row where the name matches.\n\n⚠️ Without a WHERE clause, UPDATE or DELETE can affect all rows!\n\n\n💡 Key Notes\n\n\nDML commands operate on the data, not the structure of the database.\n\nThey often work with transactions, which means you can use COMMIT or ROLLBACK to manage changes safely.\n\n\nIf you're interested, I can also explain how DML differs from DDL (Data Definition Language) or give examples with JOINs and subqueries.\n\n\n4o"
+    }
+  ],
+  "title": "SQL DML Overview"
+}
