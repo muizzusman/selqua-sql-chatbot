@@ -1,6 +1,6 @@
 import pandas as pd
 from langchain_experimental.agents import create_pandas_dataframe_agent
-from langchain_ollama import OllamaLLM
+from langchain_community.llms import LlamaCpp
 
 # Load Excel files
 chat_df = pd.read_excel("chat.xlsx")
@@ -13,8 +13,14 @@ messages_df["__source__"] = "messages"
 # Merge into one DataFrame
 combined_df = pd.concat([chat_df, messages_df], ignore_index=True)
 
-# Load Mistral via Ollama
-llm = OllamaLLM(model="mistral")
+# Load Qwen2.5-Coder via llama.cpp
+llm = LlamaCpp(
+    model_path="./models/qwen2.5-coder-7b-instruct-q4_k_m.gguf",
+    n_gpu_layers=20,
+    n_ctx=4096,
+    temperature=0.1,
+    verbose=False,
+)
 
 # print("PREVIEW DATA:")
 # print(combined_df.head())
